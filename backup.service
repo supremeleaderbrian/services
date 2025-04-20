@@ -1,0 +1,11 @@
+	[Unit]
+	Description=Nightly Backup
+	After=network.target
+
+	[Service]
+	Type=simple
+	ExecStart=/opt/backup.sh
+	Restart=on-abort
+
+	[Install]
+	WantedBy=multi-user.target
